@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Timeline - Monthsary Gift</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff0f5;
+      color: #333;
+    }
+
+    nav.navbar {
+      background: #ffc1d3;
+      padding: 10px 0;
+    }
+
+    nav.navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav.navbar ul li a {
+      text-decoration: none;
+      color: #a80038;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    nav.navbar ul li a.active,
+    nav.navbar ul li a:hover {
+      background-color: #ffd5de;
+    }
+
+    header {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    header h1 {
+      color: #b30047;
+      font-size: 2.5em;
+      font-family: 'Dancing Script', cursive;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 2px rgba(179, 0, 71, 0.3);
+      margin-bottom: 20px;
+    }
+
+    .timeline {
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .event {
+      background: #ffe6f0;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(255, 51, 102, 0.2);
+      margin-bottom: 20px;
+      position: relative;
+      cursor: default;
+
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .event::before {
+      content: "💞";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      font-size: 24px;
+    }
+
+    .event:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(255, 51, 102, 0.4);
+    }
+
+    .event h3 {
+      margin: 0;
+      color: #b30047;
+    }
+
+    .event p {
+      margin-top: 5px;
+      font-style: italic;
+    }
+
+    .event.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .milestone {
+      background: #ffcee8;
+      border: 2px solid #ff6699;
+      box-shadow: 0 0 20px 4px rgba(255, 102, 153, 0.5);
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      background: #ffd9e6;
+      color: #a06060;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="love-letter.html">Love Card</a></li>
+      <li><a href="photos.html">Photos</a></li>
+      <li><a href="timeline.html" class="active">Timeline</a></li>
+      <li><a href="music.html">Music</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Our Love Timeline 💗</h1>
+  </header>
+
+  <main class="timeline">
+    <div class="event">
+      <h3>September 2024 - Talking Stage</h3>
+      <p>Chat chat palang sayo kahit hindi naman gaanong close.</p>
+    </div>
+    <div class="event">
+      <h3>October 2024 - Loving you Affar</h3>
+      <p>Mas lalo kitang kilala at pinipilit kong mapasaya ka.</p>
+    </div>
+    <div class="event">
+      <h3>November 2024 - Umamin ako sa Acquaintance Party</h3>
+      <p>Umamin na parang Tanga habang parang papatak ang luha</p>
+    </div>
+    <div class="event milestone">
+      <h3>December 2024 - Official na Panliligaw</h3>
+      <p>Binigyan mo ako ng pagkakataon na manligaw ng maayos. Simula ng seryosong relasyon.</p>
+    </div>
+    <div class="event milestone">
+      <h3>March 15, 2024 - Sinagot Mo Ako</h3>
+      <p>Ipinakita mo ang pagmamahal mo sa akin sa isang espesyal na araw habang kumakain kami sa Mang Inasal. 🥰</p>
+    </div>
+    <div class="event">
+      <h3>April 2024 - 1st Monthsarry</h3>
+      <p>Mas tumibay ang samahan natin at puno ng saya ang bawat araw.</p>
+    </div>
+    <div class="event">
+      <h3>May 2024 - 2nd Monthsarry</h3>
+      <p>Patuloy ang paglawak ng ating pagmamahalan.</p>
+    </div>
+    <div class="event">
+      <h3>June 2024 - 3rd Monthsarry</h3>
+      <p>Mas nararamdaman ko na ang tunay na koneksyon natin.</p>
+    </div>
+    <div class="event">
+      <h3>July 2024 - 4th Monthsarry</h3>
+      <p>Masaya ako na kasama kita sa bawat sandali.</p>
+    </div>
+    <div class="event">
+      <h3>August 2024 - 5th Monthsarry</h3>
+      <p>Excited na sa mga susunod pang buwan na kasama ka.</p>
+    </div>
+    <div class="event">
+      <h3>September 2024 - 6th Monthsarry</h3>
+      <p>Half a year na tayo, at mas lalo pang tumitibay ang ating samahan.</p>
+    </div>
+    <div class="event">
+      <h3>October 2024 - 7th Monthsarry</h3>
+      <p>Lahat ng araw ay mas espesyal kapag kasama ka.</p>
+    </div>
+    <div class="event">
+      <h3>November 2024 - 8th Monthsarry</h3>
+      <p>Tuloy pa rin ang saya at pagmamahalan natin.</p>
+    </div>
+    <div class="event">
+      <h3>December 2024 - 9th Monthsarry</h3>
+      <p>Mas lalo pang lumalim ang samahan natin.</p>
+    </div>
+    <div class="event">
+      <h3>January 2025 - 10th Monthsarry</h3>
+      <p>Mas marami pang memories ang ating binuo.</p>
+    </div>
+    <div class="event">
+      <h3>February 2025 - 11th Monthsarry</h3>
+      <p>Hindi ko na maisip ang buhay kung wala ka.</p>
+    </div>
+    <div class="event">
+      <h3>March 2025 - 1st Anniversarry</h3>
+      <p>Isang taon na tayo at mas lalo pang tumibay ang pagmamahalan natin. 🥂❤️</p>
+    </div>
+    <div class="event">
+      <h3>April 2025 - 13th Monthsarry</h3>
+      <p>Patuloy ang saya at pagmamahalan natin araw-araw.</p>
+    </div>
+    <div class="event">
+      <h3>May 2025 - 14th Monthsary</h3>
+      <p>Excited sa mga susunod pang buwan at taon na magkasama tayo.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>Made with love ❤️ just for you</p>
+  </footer>
+
+  <script>
+    // Scroll reveal animation for each event
+    const events = document.querySelectorAll('.event');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    events.forEach(event => {
+      observer.observe(event);
+    });
+  </script>
+</body>
+</html>

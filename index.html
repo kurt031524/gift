@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monthsary Gift - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+      color: #333;
+      overflow: hidden; /* prevent scrolling during overlay */
+    }
+
+    /* Welcome Overlay */
+    #welcomeOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fff0f5;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 1s ease;
+    }
+
+    .heart-loader {
+      font-size: 4em;
+      animation: spin 3s linear infinite;
+      margin-bottom: 20px;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .welcome-message {
+      font-size: 1.2em;
+      color: #b30047;
+      margin-bottom: 20px;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .enter-button {
+      padding: 10px 20px;
+      background: #ff99bb;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .enter-button:hover {
+      background: #ff77aa;
+    }
+
+    /* Navbar */
+    nav.navbar {
+      background: #ffc1d3;
+      padding: 10px 0;
+    }
+
+    nav.navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav.navbar ul li a {
+      text-decoration: none;
+      color: #a80038;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    nav.navbar ul li a.active,
+    nav.navbar ul li a:hover {
+      background-color: #ffd5de;
+    }
+
+    header {
+      text-align: center;
+      margin-top: 50px;
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+      animation-delay: 1s;
+    }
+
+    header h1 {
+      color: #b30047;
+      font-size: 3.6em;
+      font-family: 'Great Vibes', cursive;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 3px rgba(179, 0, 71, 0.5);
+    }
+
+    header p {
+      font-size: 1.1em;
+      color: #6e0032;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 1.5s;
+    }
+
+    section {
+      background: #ffe6f0;
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 600px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(255, 51, 102, 0.2);
+    }
+
+    section h2 {
+      color: #b30047;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 20px;
+      background: #ffd9e6;
+      color: #a06060;
+      font-size: 14px;
+      opacity: 0;
+      animation: fadeIn 2.5s ease forwards;
+      animation-delay: 2s;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Welcome Overlay -->
+  <div id="welcomeOverlay">
+    <div class="heart-loader">❤️</div>
+    <div class="welcome-message">
+      Hi Love! 💌<br />
+      I made something special for you. I hope this little gift brings you smiles and memories. 🥰
+    </div>
+    <button class="enter-button" onclick="enterSite()">Enter</button>
+  </div>
+
+  <!-- Website Content -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="love-letter.html">Love Card</a></li>
+      <li><a href="photos.html">Photos</a></li>
+      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="music.html">Music</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Happy Monthsary, Love!</h1>
+    <p>Welcome to my special website made just for you.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>About This Gift</h2>
+      <p>This website is filled with love letters, photos, music, and memories of us.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ by your loving boyfriend</p>
+  </footer>
+
+  <script>
+    function enterSite() {
+      const overlay = document.getElementById("welcomeOverlay");
+      overlay.style.opacity = "0";
+      setTimeout(() => {
+        overlay.style.display = "none";
+        document.body.style.overflow = "auto";
+      }, 1000); // matches transition time
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+/* ===== Responsive Design ===== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff0f5;
+  color: #b30047;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+nav.navbar ul {
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+nav.navbar ul li {
+  margin-bottom: 8px;
+}
+
+/* Make font sizes adjust on smaller screens */
+h1 {
+  font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .cards-container,
+  .gallery,
+  .timeline {
+    padding: 10px;
+  }
+
+  nav.navbar ul {
+    gap: 15px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* ===== Animated Hearts (confetti effect) ===== */
+.heart {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  background-color: #ff6699;
+  transform: rotate(-45deg);
+  animation: floatUp 5s linear infinite;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #ff6699;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -12.5px;
+  left: 0;
+}
+
+.heart::after {
+  left: 12.5px;
+  top: 0;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(-45deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-120vh) rotate(-45deg);
+    opacity: 0;
+  }
+}

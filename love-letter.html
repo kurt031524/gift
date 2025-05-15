@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Love Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+      color: #4d0026;
+      overflow-x: hidden;
+    }
+
+    nav.navbar {
+      background: #ffc1d3;
+      padding: 10px 0;
+    }
+
+    nav.navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav.navbar ul li a {
+      text-decoration: none;
+      color: #a80038;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    nav.navbar ul li a.active,
+    nav.navbar ul li a:hover {
+      background-color: #ffd5de;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: #ffe6f0;
+      padding: 30px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 12px rgba(255, 105, 135, 0.2);
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    .reveal {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+
+    .intro-card {
+      animation: fadeSlide 1s ease forwards;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    @keyframes fadeSlide {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      color: #b30047;
+      margin-bottom: 20px;
+    }
+
+    .card p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      color: #80002a;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 20px;
+      background-color: #ffd9e6;
+      color: #a06060;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="love-card.html" class="active">Love Card</a></li>
+      <li><a href="photos.html">Photos</a></li>
+      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="music.html">Music</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <!-- First "To My Love 💖" Card with entrance animation -->
+    <div class="card intro-card">
+      <h1>To My Love 💖</h1>
+      <p>
+             Every moment with you is a blessing. <br />
+      You make my heart smile, and every day with you feels like magic. <br />
+      This card is just a small piece of my feelings — but know this: <br />
+      I will always love you, support you, and be here for you. 💌
+      </p>
+    </div>
+
+    <!-- Scroll-Reveal Cards -->
+    <div class="card scroll">💗 I love how you smile even when you're shy.</div>
+    <div class="card scroll">🌹 Thank you for always being patient with me.</div>
+    <div class="card scroll">💋 Your hugs are my favorite place in the world.</div>
+    <div class="card scroll">🎶 Every love song reminds me of you.</div>
+    <div class="card scroll">✨ I’m the luckiest to call you mine.</div>
+    <div class="card scroll">🧸 You’re my comfort and my peace.</div>
+    <div class="card scroll">🍓 You’re sweeter than any dessert!</div>
+    <div class="card scroll">📸 I love every moment we’ve captured.</div>
+    <div class="card scroll">❤️ My heart chose you — always will.</div>
+    <div class="card scroll">🎈 I celebrate you every single day.</div>
+    <div class="card scroll">☁️ You lift me even on hard days.</div>
+    <div class="card scroll">🌈 You color my world with joy.</div>
+    <div class="card scroll">🌸 I fall in love with you more every day.</div>
+    <div class="card scroll">📖 You are the best chapter in my story.</div>
+    <div class="card scroll">🐻 My cute and cuddly forever.</div>
+    <div class="card scroll">💌 You deserve all the love in the world.</div>
+    <div class="card scroll">🎁 You’re the greatest gift of all.</div>
+    <div class="card scroll">🕊️ With you, life is peace and love.</div>
+    <div class="card scroll">🌟 You shine brighter than stars.</div>
+    <div class="card scroll">🏹 Cupid made no mistake with us. 💘</div>
+  </div>
+
+  <footer>
+    With all my love, forever. ❤️
+  </footer>
+
+  <!-- Scroll Reveal JavaScript -->
+  <script>
+    const cards = document.querySelectorAll('.card.scroll');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    cards.forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+</body>
+</html>
